@@ -7,14 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E55F684A1FCA30E80096F05B /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55F68491FCA30E80096F05B /* Profile.swift */; };
 		E574CF081F98730F00349D62 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574CF071F98730F00349D62 /* AppDelegate.swift */; };
 		E574CF0A1F98730F00349D62 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E574CF091F98730F00349D62 /* ViewController.swift */; };
 		E574CF0D1F98730F00349D62 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E574CF0B1F98730F00349D62 /* Main.storyboard */; };
 		E574CF0F1F98730F00349D62 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E574CF0E1F98730F00349D62 /* Assets.xcassets */; };
 		E574CF121F98730F00349D62 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E574CF101F98730F00349D62 /* LaunchScreen.storyboard */; };
+		E5CE1B351FCA325100B9E58F /* ProfileDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5CE1B341FCA325100B9E58F /* ProfileDataFetcher.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E55F68491FCA30E80096F05B /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		E574CF041F98730F00349D62 /* TreehouseProfile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TreehouseProfile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E574CF071F98730F00349D62 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E574CF091F98730F00349D62 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		E574CF0E1F98730F00349D62 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E574CF111F98730F00349D62 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E574CF131F98730F00349D62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5CE1B341FCA325100B9E58F /* ProfileDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataFetcher.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +39,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E55F684C1FCA30FB0096F05B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E55F68491FCA30E80096F05B /* Profile.swift */,
+				E5CE1B341FCA325100B9E58F /* ProfileDataFetcher.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E55F684D1FCA31140096F05B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				E574CF091F98730F00349D62 /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		E574CEFB1F98730F00349D62 = {
 			isa = PBXGroup;
 			children = (
@@ -54,8 +75,9 @@
 		E574CF061F98730F00349D62 /* TreehouseProfile */ = {
 			isa = PBXGroup;
 			children = (
+				E55F684D1FCA31140096F05B /* Controllers */,
+				E55F684C1FCA30FB0096F05B /* Models */,
 				E574CF071F98730F00349D62 /* AppDelegate.swift */,
-				E574CF091F98730F00349D62 /* ViewController.swift */,
 				E574CF0B1F98730F00349D62 /* Main.storyboard */,
 				E574CF0E1F98730F00349D62 /* Assets.xcassets */,
 				E574CF101F98730F00349D62 /* LaunchScreen.storyboard */,
@@ -137,7 +159,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E574CF0A1F98730F00349D62 /* ViewController.swift in Sources */,
+				E55F684A1FCA30E80096F05B /* Profile.swift in Sources */,
 				E574CF081F98730F00349D62 /* AppDelegate.swift in Sources */,
+				E5CE1B351FCA325100B9E58F /* ProfileDataFetcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
