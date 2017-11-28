@@ -10,7 +10,7 @@ import Foundation
 
 struct ProfileDataFetcher {
     
-    func fetchData(completion: () -> Void) {
+    func fetchData(completion: @escaping () -> Void) {
         let jsonURLString = "https://teamtreehouse.com/addisonfrancisco.json"
         guard let url = URL(string: jsonURLString) else { return }
         
@@ -26,7 +26,7 @@ struct ProfileDataFetcher {
             catch let jsonErr {
                 print("Error serializing json", jsonErr)
             }
+            completion()
             }.resume()
-        completion()
     }
 }

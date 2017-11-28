@@ -17,11 +17,15 @@ class ViewController: UIViewController {
     
     @IBAction func doItButton(_ sender: UIButton) {
         if !didGetData {
+            sender.isEnabled = false
+            
             dataFetcher.fetchData() { () in
-                didGetData = true
-                buttonSubTextLabel.isHidden = false
-                sender.isEnabled = false
-                print("Did the thing: \(didGetData)")
+                self.didGetData = true
+                
+                DispatchQueue.main.async {
+                    self.buttonSubTextLabel.isHidden = false
+                    print("Did the thing: \(self.didGetData)")
+                }
             }
         }
     }
