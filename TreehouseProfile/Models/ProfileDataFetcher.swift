@@ -9,24 +9,24 @@
 import Foundation
 
 struct ProfileDataFetcher {
-	
-	func fetchData(completion: () -> Void) {
-		let jsonURLString = "https://teamtreehouse.com/addisonfrancisco.json"
-		guard let url = URL(string: jsonURLString) else { return }
-		
-		URLSession.shared.dataTask(with: url) {(data, response, err) in
-			guard let myData = data else { return }
-			
-			do {
-				let profileFromJSON = try JSONDecoder().decode(UserProfile.self, from: myData)
-				if let badges = profileFromJSON.badges {
-					print(badges)
-				}
-			}
-			catch let jsonErr {
-				print("Error serializing json", jsonErr)
-			}
-			}.resume()
-		completion()
-	}
+    
+    func fetchData(completion: () -> Void) {
+        let jsonURLString = "https://teamtreehouse.com/addisonfrancisco.json"
+        guard let url = URL(string: jsonURLString) else { return }
+        
+        URLSession.shared.dataTask(with: url) {(data, response, err) in
+            guard let myData = data else { return }
+            
+            do {
+                let profileFromJSON = try JSONDecoder().decode(UserProfile.self, from: myData)
+                if let badges = profileFromJSON.badges {
+                    print(badges)
+                }
+            }
+            catch let jsonErr {
+                print("Error serializing json", jsonErr)
+            }
+            }.resume()
+        completion()
+    }
 }
