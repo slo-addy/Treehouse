@@ -9,25 +9,52 @@
 import Foundation
 
 struct UserProfile: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case name = "name"
+        case profileName = "profile_name"
+        case profileURL = "profile_url"
+        case gravatarURL = "gravatar_url"
+        case badges = "badges"
+        case points = "points"
+    }
+    
     let name: String?
-    let profile_name: String?
-    let profile_url: String?
-    let gravatar_url: String?
-    let badges: [Badges]?
+    let profileName: String?
+    let profileURL: String?
+    let gravatarURL: String?
+    let badges: [Badge]?
     let points: [String: Int]?
 }
 
-struct Badges: Codable {
+struct Badge: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case id = "id"
+        case name = "name"
+        case url = "url"
+        case iconURL = "icon_url"
+        case earnedDate = "earned_date"
+        case courses = "courses"
+    }
+    
     let id: Int // There should always be an ID
     let name: String?
     let url: String?
-    let icon_url: String?
-    let earned_date: String?
-    let courses: [Courses]?
+    let iconURL: String?
+    let earnedDate: String?
+    let courses: [Course]?
 }
 
-struct Courses: Codable {
+struct Course: Codable {
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "title"
+        case url = "url"
+        case badgeCount = "badge_count"
+    }
+    
     let title: String?
     let url: String?
-    let badge_count: Int?
+    let badgeCount: Int?
 }
